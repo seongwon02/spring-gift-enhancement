@@ -56,6 +56,7 @@ public class OptionServiceImpl implements OptionService{
         return new OptionResponseDto(option.getId(), option.getName(), option.getQuantity());
     }
 
+    @Transactional
     @Override
     public OptionResponseDto saveOption(Long productId, OptionRequestDto dto) {
 
@@ -90,6 +91,7 @@ public class OptionServiceImpl implements OptionService{
         return new OptionResponseDto(option.getId(), option.getName(), option.getQuantity());
     }
 
+    @Transactional
     @Override
     public void deleteOption(Long optionId) {
 

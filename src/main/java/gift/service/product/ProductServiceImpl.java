@@ -94,6 +94,7 @@ public class ProductServiceImpl implements ProductService{
                 );
     }
 
+    @Transactional
     @Override
     public ProductResponseDto saveProduct(ProductRequestDto dto) {
 

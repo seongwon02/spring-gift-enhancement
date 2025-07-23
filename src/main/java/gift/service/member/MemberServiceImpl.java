@@ -30,6 +30,7 @@ public class MemberServiceImpl implements MemberService {
         this.jwtTokenProvider = jwtTokenProvider;
     }
 
+    @Transactional
     @Override
     public TokenResponseDto registerMember(MemberRequestDto dto) {
 
@@ -116,6 +117,7 @@ public class MemberServiceImpl implements MemberService {
                 );
     }
 
+    @Transactional
     @Override
     public MemberResponseDto saveMember(MemberRequestDto dto) {
 
@@ -152,6 +154,7 @@ public class MemberServiceImpl implements MemberService {
         );
     }
 
+    @Transactional
     @Override
     public void deleteMember(Long id) {
         if (!memberRepository.existsById(id)) {
